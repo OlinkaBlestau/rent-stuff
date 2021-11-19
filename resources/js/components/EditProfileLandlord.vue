@@ -1,10 +1,10 @@
 <template>
     <div class="page">
-        <div class="SignPage">
+        <div class="EditPage">
             <div class="d-flex col-12 form-signin container justify-content-center">
-                <form action="/signInService" method="post">
+                <form action="/editProfileService" method="post">
                     <input type="hidden" name="_token" :value="this.csrfToken">
-                    <h1 class="title mb-3 fw-normal text-center">Зареєструйтесь</h1>
+                    <h1 class="title mb-3 fw-normal text-center">Змініть інформацію про себе</h1>
                     <div class="form-group mt-4">
                         <label for="name">Iм'я</label>
                         <input v-model="name" type="text" :class="'form-control ' + formErrors.name" id="name" name="name" placeholder="Введiть iм'я">
@@ -29,19 +29,8 @@
                         <label for="address">Адреса</label>
                         <input v-model="address" type="text" :class="'form-control ' + formErrors.address" id="address" name="address" placeholder="Введiть адресу">
                     </div>
-                    <div class="form-group mt-4">
-                        <label>Ви орендатор чи орендодавець</label>
-                        <select name="role" id="role" class="form-select">
-                            <option value="1" selected>Орендодавець</option>
-                            <option value="0">Орендатор</option>
-                        </select>
-                    </div>
-
                     <div class="form-group text-center">
-                        <button class="btn" type="submit" :disabled="active">Зареєструватись</button>
-                    </div>
-                    <div class="form-group text-center">
-                        <a href="/signUp">Вже маю акаунт</a>
+                        <button class="btn" type="submit" :disabled="active">Зберігти</button>
                     </div>
                 </form>
             </div>
@@ -52,24 +41,29 @@
 <script>
 export default {
     name: "SignIn",
-    data: () => ({
-        name: "",
-        surname: "",
-        email: "",
-        password: "",
-        phone: "",
-        address: "",
-        role: "",
-        formErrors: {
-            name: "is-invalid",
-            surname: "is-invalid",
-            email: "is-invalid",
-            password: "is-invalid",
-            phone: "is-invalid",
-            address: "is-invalid",
-        },
-        active: true
-    }),
+    props: {
+        user: {}
+    },
+    data() {
+        return {
+            userData: JSON.parse(this.user),
+            name: "",
+            surname: "",
+            email: "",
+            password: "",
+            phone: "",
+            address: "",
+            formErrors: {
+                name: "is-invalid",
+                surname: "is-invalid",
+                email: "is-invalid",
+                password: "is-invalid",
+                phone: "is-invalid",
+                address: "is-invalid",
+            },
+            active: true
+        }
+    },
     updated() {
         let errors = Object.values(this.formErrors);
         this.active = errors.includes("is-invalid")
@@ -78,6 +72,14 @@ export default {
         csrfToken: function () {
             return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
         },
+    },
+    mounted() {
+            this.name = this.userData.Name;
+            this.surname = this.userData.Surname;
+            this.email = this.userData.Email;
+            this.password = this.userData.Password;
+            this.phone = this.userData.Phone;
+            this.address = this.userData.Address;
     },
     watch: {
         name() {
@@ -138,7 +140,7 @@ h3{
     font-size: 40px;
 }
 
-.SignPage{
+.EditPage{
     margin: 40px auto;
     max-width: 650px;
     padding: 40px 20px;

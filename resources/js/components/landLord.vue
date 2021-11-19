@@ -4,7 +4,7 @@
             <div class="img__container">
                 <h1 class="img__title">RentStuff</h1>
                 <h3 class="img__description">сервіс оренди</h3>
-                <form action="/signUp">
+                <form action="/CreateAd">
                     <button type="submit"> <span class="text__btn">Створити оголошення</span></button>
                 </form>
             </div>
@@ -69,7 +69,7 @@
         <section class="section__contacts">
             <div class="contacts">
                 <div class="contacts__title">
-                    <h3 class="section__title"> <a name="contacts"> Контакти </a> </h3>
+                    <h3 class="section__title"><a name="contacts"> Контакти </a> </h3>
                 </div>
                 <div class="social__net">
                     <h5 class="main_social_net">Соціальні мережі</h5>
@@ -89,13 +89,11 @@
 
 <script>
 export default {
-    name: "Main"
+    name: "landLord"
 }
 </script>
 
-
 <style scoped>
-
 .chat{
     color: #000000;
 }
@@ -241,6 +239,4 @@ li{
     font-size: 25px;
     font-family: 'Poiret One', cursive;
 }
-
-
 </style>
