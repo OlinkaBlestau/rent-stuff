@@ -31,7 +31,7 @@ class BaseMigration extends Migration
             $table->string('Name');
             $table->integer('Price');
             $table->text('Description');
-            $table->string('Img_URL');
+            $table->string('Img_URL')->nullable();
             $table->dateTime('Created_at')->nullable()->useCurrent();
             $table->dateTime('Updated_at')->nullable()->useCurrentOnUpdate();
         });

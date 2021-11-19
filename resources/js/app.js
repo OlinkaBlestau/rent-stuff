@@ -20,14 +20,22 @@ import 'material-icons/iconfont/material-icons.css';
 
 //defined as global component
 Vue.component('main-page', require('./components/Main.vue').default);
-
+Vue.component('landlord-page', require('./components/landLord.vue').default);
 Vue.component('V-MaterialIcon', require('vue-materials-icon/MaterialIcon').default);
-
-
+Vue.component('tenant-page', require('./components/Tenant.vue').default);
 Vue.component('navbar', require('./components/Navbar.vue').default);
+Vue.component('create-ad', require('./components/CreateAd.vue').default);
+Vue.component('profile-landlord', require('./components/ViewProfileLandlord.vue').default);
+Vue.component('edit-landlord', require('./components/EditProfileLandlord.vue').default);
+Vue.component('support', require('./components/Support.vue').default);
+Vue.component('profile-tenant', require('./components/ViewProfileTenant.vue').default);
+Vue.component('view-ad', require('./components/ViewAd.vue').default);
+Vue.component('edit-ad', require('./components/EditAd.vue').default);
+Vue.component('profile', require('./components/Profile.vue').default);
 
 Vue.component('sign-up', require('./components/SignUp.vue').default);
 Vue.component('sign-in', require('./components/SignIn.vue').default);
+Vue.component('ad', require('./components/Ad.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

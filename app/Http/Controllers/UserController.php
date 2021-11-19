@@ -26,4 +26,13 @@ class UserController extends Controller
 
     }
 
+    public function profile($id): void
+    {
+        UserService::profile($id);
+    }
+
+    public function editUser(Request $request): void
+    {
+        UserService::editUser($request);
+    }
 }

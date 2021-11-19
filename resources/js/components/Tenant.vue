@@ -4,15 +4,12 @@
             <div class="img__container">
                 <h1 class="img__title">RentStuff</h1>
                 <h3 class="img__description">сервіс оренди</h3>
-                <form action="/signUp">
-                    <button type="submit"> <span class="text__btn">Створити оголошення</span></button>
-                </form>
             </div>
         </div>
         <section class="section__about">
             <div class="section__container">
                 <div class="section__header">
-                    <h3 class="section__title"> <a name="rent" >Можливо здати в оренду </a> </h3>
+                    <h3 class="section__title"> <a name="rent" >Можливо взяти в оренду</a> </h3>
                 </div>
             </div>
             <div class="about">
@@ -69,7 +66,7 @@
         <section class="section__contacts">
             <div class="contacts">
                 <div class="contacts__title">
-                    <h3 class="section__title"> <a name="contacts"> Контакти </a> </h3>
+                    <h3 class="section__title"><a name="contacts"> Контакти </a> </h3>
                 </div>
                 <div class="social__net">
                     <h5 class="main_social_net">Соціальні мережі</h5>
@@ -85,17 +82,15 @@
             </div>
         </section>
     </div>
-</template>
+</template>Zago.au67@gmail.coma
 
 <script>
 export default {
-    name: "Main"
+    name: "Tenant"
 }
 </script>
 
-
 <style scoped>
-
 .chat{
     color: #000000;
 }
@@ -112,18 +107,6 @@ export default {
     background-size: cover;
 }
 
-button{
-    position: absolute;
-    width: 243px;
-    left: 1265px;
-    top: 580px;
-    font-family: 'Palanquin Dark', sans-serif;
-    font-size: 22px;
-    display: flex;
-    border-radius:10px;
-    background-color: #C7B9B7;
-    outline: none;
-}
 .img__container {
     position: relative;
 }
@@ -241,6 +224,4 @@ li{
     font-size: 25px;
     font-family: 'Poiret One', cursive;
 }
-
-
 </style>

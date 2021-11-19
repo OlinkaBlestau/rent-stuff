@@ -1,24 +1,57 @@
 <template>
     <header>
-        <nav class="py-2 bg-light border-bottom">
-            <div class="container">
-                <ul class="nav col-12 mb-2 text-center justify-content-center mb-md-0">
-                    <li class="nav-item"><a href="/documents" class="nav-link link-dark px-2 active" aria-current="page">Documents</a></li>
-                    <li class="nav-item"><a href="/board" class="nav-link link-dark px-2">Board</a></li>
-                    <li class="nav-item"><a href="/projects" class="nav-link link-dark px-2">Projects</a></li>
-                    <!--                    <li class="nav-item"><a href="/reports" class="nav-link link-dark px-2">Reports</a></li>-->
-                    <!--                    <li>
-                                            <div class="dropdown show">
-                                                <a class="nav-link link-dark dropdown-toggle" href="#" id="dropdownSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Settings
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownSettings">
-                                                </div>
-                                            </div>
-                                        </li>-->
-                    <li><a type="button" href="/signIn" class="nav-link active">Регистрация</a></li>
-                    <li><a type="button" href="/signUp" class="btn btn-primary me-2">Увийты</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light" >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">RentStuff</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="d-flex">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav col-12 mb-2 text-center justify-content-center mb-md-0">
+
+                            <li v-if="role === '0'"><a type="button" href="/Tenant" class="nav-link link-dark px-2">Головна</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="/landLord" class="nav-link link-dark px-2">Головна</a></li>
+                            <li v-else><a type="button" href="/" class="nav-link link-dark px-2">Головна</a></li>
+
+                            <li v-if="role === '0'"><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
+                            <li v-else><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
+
+                            <li v-if="role === '0'"><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
+                            <li v-else><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
+
+                            <li v-if="role === '0'"><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
+                            <li v-else><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
+
+                            <li v-if="role === ''"><a type="button" href="/signUp" class="nav-link link-dark px-2">Увійти</a></li>
+                            <li v-else-if="role === '1'"><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Профіль</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="/ViewProfileLandlord">Мій профіль</a>
+                                    <a class="dropdown-item" href="/ViewAd">Мої оголошення</a>
+                                    <a class="dropdown-item" href="#">Повідомлення</a>
+                                    <a class="dropdown-item" href="/Support">Служба підтримки</a>
+                                </div>
+                            </li>
+                            <li v-else><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Профіль</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="/ViewProfileLandlord">Мій профіль</a>
+                                    <a class="dropdown-item" href="/Support">Служба підтримки</a>
+                                </div>
+                            </li>
+                            <li v-if="role !== ''"><a type="button" href="/logOut" class="nav-link link-dark px-2">Вийти</a></li>
+                            <li><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkLan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ua</a>
+                                <div class="dropdown-menu" id = "lang" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item"  href="#">En</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -26,17 +59,57 @@
 
 <script>
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    props: {
+        user: "",
+        role: "",
+    }
 }
 </script>
+<style>
+header{
 
-<style scoped>
-.nav-item {
-    margin: 0 10px 0 10px;
+    background-color: #C7B9B7;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+html ,body{
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;700&display=swap');
+
+    font-family: 'Palanquin Dark', sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+
 }
 
-.button {
-    margin-left: 50px;
+</style>
+<style scoped>
+
+.navbar-brand{
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-left:20px;
+}
+ul li a:hover{
+    color:#000000;
+    text-decoration: underline;
+}
+.dropdown-item{
+    text-align: center;
+}
+#lang{
+    min-width: 20px;
+}
+
+.d-flex a{
+    font-family: 'Poiret One', cursive;
+    font-size: 28px;
+    font-weight: 400;
+    margin-right:50px;
 }
 
 </style>

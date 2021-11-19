@@ -40,17 +40,23 @@ class UserService
      */
     public static function signUp(SignUpRequest $request): bool
     {
-        $userData = DB::table('users')
-            ->where('email', '=', $request['email'])
-            ->where('password', '=', $request['password'])
+        $userData = DB::table('User')
+            ->where('Email', '=', $request['email'])
+            ->where('Password', '=', $request['password'])
             ->first();
         if (is_object($userData)) {
-            session()->put('userId', $userData->id);
-            session()->put('name', $userData->name);
-            session()->put('surname', $userData->surname);
-        }
-        header("Location: /projects");
+            session()->put('UserId', $userData->id);
+            session()->put('Role', $userData->Role);
 
+            if ($userData->Role === 0) {
+                header("location: /Tenant");
+            } else {
+                header("location: /landLord");
+            }
+
+            return true;
+        }
+        header("Location: /signUp");
         return true;
     }
 
@@ -73,68 +79,23 @@ class UserService
      */
     public static function logOut(): bool
     {
-        session()->pull('id');
-        session()->pull('name');
-        session()->pull('surname');
-        session()->pull('activeProject');
+        session()->pull('UserId');
+        session()->pull('Role');
         header("Location: /");
         return true;
     }
 
-    /**
-     * Sign up with Google service
-     */
-    public static function googleSignUp(): bool
+    public static function profile($id)
     {
-        $googleUser = Socialite::driver('google')->user();
+            $user = DB::table("User")
+                ->where('id',$id)
+                ->first();
 
-        $user = DB::table('users')
-            ->where("google_id", "=", $googleUser->getId())
-            ->first();
-        if($user === null) {
-            $id = DB::table('users')->insertGetId([
-                'name' => $googleUser['given_name'],
-                'surname' => $googleUser["family_name"],
-                'email' => $googleUser['email'],
-                'google_id' => $googleUser->getId()
-            ]);
-            session()->put('userId', $id);
-        } else {
-            session()->put('userId', $user->id);
-        }
-
-        session()->put('name', $googleUser['given_name']);
-        session()->put('surname', $googleUser['family_name']);
-        header("Location: /");
-        return true;
-    }
-
-    /**
-     * Sign up with Facebook service
-     */
-    public static function facebookSignUp(): void
-    {
-        $facebookUser = Socialite::driver('facebook')->user();
-        $fullName = explode(" ", $facebookUser['name']);
-        $user = DB::table('users')
-            ->where("facebook_id", "=", $facebookUser->getId())
-            ->first();
-
-        if($user === null) {
-            $id = DB::table('users')->insertGetId([
-                'name' => $fullName[0],
-                'surname' => $fullName[1],
-                'email' => $facebookUser['email'],
-                'facebook_id' => $facebookUser->getId()
-            ]);
-            session()->put('userId', $id);
-        } else {
-            session()->put('userId', $user->id);
-        }
-
-        session()->put('name', $fullName[0]);
-        session()->put('surname', $fullName[1]);
-        header("Location: /");
+            if ($user->Role === 1){
+                header("location: /landLord");
+            } else {
+                header("location: /Tenant");
+            }
     }
 
     /**
@@ -144,6 +105,22 @@ class UserService
      */
     public static function getUserBySession()
     {
-        return User::find(session()->get("userId"));
+        return json_encode(User::find(session()->get("UserId")));
+    }
+
+
+    public static function editUser(Request $request)
+    {
+        DB::table('User')
+            ->where('id', session()->get('UserId'))
+            ->update([
+                'Name' => $request['name'],
+                'Surname' => $request['surname'],
+                'Email' => $request['email'],
+                'Phone' => $request['phone'],
+                'Address' => $request['address'],
+                'Password' => $request['password'],
+            ]);
+        header('location: /ViewProfileLandlord');
     }
 }
