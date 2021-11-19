@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ThingController;
+
+use App\Services\UserService;
+use App\Services\ThingService;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -78,6 +82,11 @@ Route::get('/EditProfileLandlord', function () { //компонент
         'user' => UserService::getUserBySession()
     ]);
 });
+
+Route::post(
+    '/createAdService',
+    [ThingController::class, 'createThing']
+)->name('createAd');
 
 Route::match(
     ['get', 'post'],

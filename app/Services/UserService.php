@@ -105,6 +105,22 @@ class UserService
      */
     public static function getUserBySession()
     {
-        return User::find(session()->get("userId"));
+        return json_encode(User::find(session()->get("UserId")));
+    }
+
+
+    public static function editUser(Request $request)
+    {
+        DB::table('User')
+            ->where('id', session()->get('UserId'))
+            ->update([
+                'Name' => $request['name'],
+                'Surname' => $request['surname'],
+                'Email' => $request['email'],
+                'Phone' => $request['phone'],
+                'Address' => $request['address'],
+                'Password' => $request['password'],
+            ]);
+        header('location: /ViewProfileLandlord');
     }
 }

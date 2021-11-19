@@ -35,6 +35,7 @@ Vue.component('profile', require('./components/Profile.vue').default);
 
 Vue.component('sign-up', require('./components/SignUp.vue').default);
 Vue.component('sign-in', require('./components/SignIn.vue').default);
+Vue.component('ad', require('./components/Ad.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
