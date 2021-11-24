@@ -32,4 +32,18 @@ class ThingService
         DB::table('Thing')->delete($id);
         header('location: /ViewAd');
     }
+
+    public static function editThing(Request $request, $id)
+    {
+        DB::table('Thing')
+            ->where('id', $id)
+            ->update([
+                'Name' => $request['name'],
+                'Price' => $request['price'],
+                'Description' => $request['description'],
+                'id_User' => session()->get('UserId'),
+                'id_Category' => $request['category'],
+            ]);
+        header('location: /ViewAd');
+    }
 }

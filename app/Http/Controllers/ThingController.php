@@ -17,4 +17,9 @@ class ThingController extends Controller
         ThingService::deleteThing($id);
     }
 
+    public function editThing(Request $request, $id): void
+    {
+        ThingService::editThing($request, $id);
+    }
+
 }

@@ -33,7 +33,8 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="/ViewProfileLandlord">Мій профіль</a>
                                     <a class="dropdown-item" href="/ViewAd">Мої оголошення</a>
-                                    <a class="dropdown-item" href="#">Повідомлення</a>
+                                    <a class="dropdown-item" href="/CreateAd">Створити оголошення</a>
+                                    <!--<a class="dropdown-item" href="#">Повідомлення</a>-->
                                     <a class="dropdown-item" href="/Support">Служба підтримки</a>
                                 </div>
                             </li>

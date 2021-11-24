@@ -186,15 +186,7 @@ input{
     font-size: 16px;
     font-weight: 300;
 }
-.form-select{
-    position: relative;
-    left: 20px;
-    width:350px;
-    height: 50px;
-    font-family: 'Palanquin Dark', sans-serif;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+
 .form-group a{
 
     margin-top: 20px;
