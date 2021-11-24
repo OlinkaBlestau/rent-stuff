@@ -43,7 +43,10 @@ export default {
     },
     computed: {
         deleteThing: function () {
-            return '/deleteThing/' + this.id;
+            return `/deleteThing/${this.id}`;
+        },
+        editThing: function () {
+            return `editThing/${this.id}`
         }
     }
 }

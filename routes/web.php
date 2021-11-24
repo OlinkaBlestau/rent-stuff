@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Thing;
+use App\Models\Category;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ThingController;
 
@@ -94,7 +97,8 @@ Route::get('/ViewAd', function () {
     return view('viewAd', [
         'UserId' => session()->get('UserId'),
         'Role' => session()->get('Role'),
-        'things' => ThingService::getThingsForUser()
+        'things' => ThingService::getThingsForUser(),
+        'category' => Category::all()
     ]);
 });
 
@@ -102,6 +106,7 @@ Route::get('/editThing/{id}', function ($id) {
     return view('EditAd', [
         'UserId' => session()->get('UserId'),
         'Role' => session()->get('Role'),
+        'thing' => Thing::find($id),
     ]);
 });
 
