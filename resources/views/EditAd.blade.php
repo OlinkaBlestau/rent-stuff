@@ -2,6 +2,8 @@
 
 @section('content')
     <div id="app">
-        <edit-ad></edit-ad>
+        <edit-ad
+            thing="{{ $thing }}"
+        />
     </div>
 @endsection

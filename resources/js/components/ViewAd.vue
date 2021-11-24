@@ -7,7 +7,7 @@
             :id="thing.id"
             :name="thing.Name"
             :price="thing.Price"
-            :category="thing.Id_Category"
+            :category=parseCategory(thing.Id_Category)
             :description="thing.Description"
         />
     </div>
@@ -17,11 +17,25 @@
 export default {
     name: "ViewAd",
     props: {
-        things: []
+        things: [],
+        category: [],
     },
     data() {
         return {
             thingsData: JSON.parse(this.things),
+            categoryData: JSON.parse(this.category),
+        }
+    },
+
+    methods: {
+        parseCategory: function (index) {
+            let flag;
+            this.categoryData.forEach(category => {
+                if(category.id === index) {
+                    flag = category.Name;
+                }
+            });
+            return flag;
         }
     }
 }

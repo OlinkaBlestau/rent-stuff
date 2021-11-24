@@ -19,7 +19,7 @@
                 <div class="about__first">
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257617515_3061423760852178_5214139688266362271_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=-QuPnaIDlTUAX9Ymq1P&_nc_oc=AQl7u2Y7MxpUNN9XvY1doXT3NDOC3voUTcg1wxlAZx41SOlLsky9kLlXPxYkaj6x5I8&_nc_ht=scontent.fhrk2-1.fna&oh=9897ebdeac7a489bd05324549214ab26&oe=6199A78A" alt="">
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257617515_3061423760852178_5214139688266362271_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=s8_hL7xgI8YAX8HGyLW&_nc_oc=AQl6KhbbeFfLuKB052HaH_wR07pcHQMdNRO6AcjpsQy6qhEJiVyivXZJjMOY1SaBA3o&_nc_ht=scontent.fhrk2-1.fna&oh=104d80c2b4084095ae549fca9d80f13d&oe=619F964A" alt="">
                             <h5 class="about__description">Спортивний інвентар</h5>
                         </div>
                     </div>
@@ -33,13 +33,13 @@
                 <div class="about__first">
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258170798_3061424124185475_8974984382869903643_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=iAKuDvZe7rEAX8fBSwG&_nc_ht=scontent.fhrk2-1.fna&oh=42b4cfc61a7dfb3dbde01a04c6c7f56c&oe=6198F4E3" alt="">
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258170798_3061424124185475_8974984382869903643_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=IwlWB1JbstIAX8DOIB2&_nc_ht=scontent.fhrk2-1.fna&oh=6e25fca63a3ed321381f145a28741591&oe=619EE3A3" alt="">
                             <h5 class="about__description">Одяг та аксесуари</h5>
                         </div>
                     </div>
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=fbXEpIIo14sAX9S4oS1&_nc_ht=scontent.fhrk2-1.fna&oh=f80c2cd936e8c93f7835d9f96cf893df&oe=61997E6E" alt="">
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=NOjP63zV31cAX_YuGk0&tn=4PwsVO3a-OZjN1hy&_nc_ht=scontent.fhrk2-1.fna&oh=e75039597edf14e7247662a28e2632a7&oe=619F6D2E" alt="">
                             <h5 class="about__description">Електричні прилади</h5>
                         </div>
                     </div>

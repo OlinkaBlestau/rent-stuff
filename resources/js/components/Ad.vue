@@ -1,7 +1,7 @@
 <template>
     <div class="infobox">
         <div class="thing__img">
-            <img class="images" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=fbXEpIIo14sAX9S4oS1&_nc_ht=scontent.fhrk2-1.fna&oh=f80c2cd936e8c93f7835d9f96cf893df&oe=61997E6E" alt="">
+            <img class="images" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=NOjP63zV31cAX_YuGk0&tn=4PwsVO3a-OZjN1hy&_nc_ht=scontent.fhrk2-1.fna&oh=e75039597edf14e7247662a28e2632a7&oe=619F6D2E" alt="">
         </div>
         <div class="name">
             <h5 class="title">Назва:</h5>
@@ -23,7 +23,7 @@
             <a id="deleteButton" :href=deleteThing type="submit" class="btn"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1214/1214428.png" alt=""></a>
         </div>
         <div class="btn-new">
-            <a id="editButton" href="#" type="submit" class="btn"> <img class="icon" src="https://t3.ftcdn.net/jpg/01/07/62/08/240_F_107620831_1Z8lQg6d7DY782MlV1L3gNt2HDAn2j7u.jpg" alt=""></a>
+            <a id="editButton" :href=editThing type="submit" class="btn"> <img class="icon" src="https://cdn-icons-png.flaticon.com/128/1250/1250615.png" alt=""></a>
         </div>
         <div class="btn-new">
             <a id="newButton" href="/CreateAd" type="submit" class="btn"> <img class="icon" src="https://cdn-icons-png.flaticon.com/128/628/628586.png" alt=""></a>
@@ -43,7 +43,10 @@ export default {
     },
     computed: {
         deleteThing: function () {
-            return '/deleteThing/' + this.id;
+            return `/deleteThing/${this.id}`;
+        },
+        editThing: function () {
+            return `editThing/${this.id}`
         }
     }
 }
@@ -52,7 +55,7 @@ export default {
 <style scoped>
     h1 {
         text-align: center;
-        margin-top: 40px;
+        margin-top: 35px;
     }
     .icon{
         width: 40px;
@@ -115,7 +118,7 @@ export default {
         margin: 0 410px 25px;
     }
     .infobox {
-        margin: 25px auto;
+        margin: 15px auto;
         width: 1500px;
         height: 365px;
         padding: 40px 20px;

@@ -122,5 +122,7 @@ class UserService
                 'Password' => $request['password'],
             ]);
         header('location: /ViewProfileLandlord');
+
     }
+
 }

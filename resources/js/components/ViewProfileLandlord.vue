@@ -49,16 +49,17 @@ export default {
 
 <style scoped>
 h2{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .dataTitle{
     font-family: 'Poiret One', cursive;
     font-size: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 .infobox{
-    margin: 50px auto;
-    max-width: 650px;
+    margin: 25px auto;
+    width: 650px;
+    height: 820px;
     padding: 40px 20px;
     background:#E3DBDA;
     border-radius: 15px;
@@ -66,7 +67,7 @@ h2{
     text-shadow: none;
 }
 #submitButton{
-    margin-top: 20px;
+    margin-top: 10px;
     position:relative;
     width: 40%;
     font-family: 'Palanquin Dark', sans-serif;
@@ -77,7 +78,7 @@ h2{
 }
 .dataInfo{
     font-family: 'Palanquin Dark', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 </style>
