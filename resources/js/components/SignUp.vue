@@ -4,20 +4,20 @@
             <div class="d-flex col-12 form-signin container justify-content-center ">
                 <form action="/signUpService" method="post">
                     <input type="hidden" name="_token" :value="this.csrfToken">
-                    <h1 class="h3  fw-normal text-center">Вхід</h1>
+                    <h1 class="h3  fw-normal text-center">{{ $t("formEnter.enter") }}</h1>
                     <div class="form-group mt-4">
-                        <label for="email">Електронна пошта</label>
+                        <label for="email">{{ $t("formEnter.email") }}</label>
                         <input v-model="email" type="email" :class="'form-control ' + formErrors.email" id="email" name="email" placeholder="name@example.com">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="password">Пароль</label>
+                        <label for="password">{{ $t("formEnter.password") }}</label>
                         <input v-model="password" type="password" :class="'form-control ' + formErrors.password" id="password" name="password" placeholder="Пароль">
                     </div>
                     <div class="form-group text-center">
-                        <button class="btn" type="submit" :disabled="active">Увійти</button>
+                        <button class="btn" type="submit" :disabled="active">{{ $t("formEnter.btnEnter") }}</button>
                     </div>
                     <div class="form-group text-center">
-                        <a href="/signIn" >Створити акаунт</a>
+                        <a href="/signIn" >{{ $t("formEnter.href") }}</a>
                     </div>
                 </form>
             </div>

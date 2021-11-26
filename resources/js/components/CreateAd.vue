@@ -1,32 +1,32 @@
 <template>
     <div class="CrateAd">
         <div class="infobox">
-            <h2>Створити оголошення</h2>
+            <h2>{{ $t("Announcement.createAd") }}</h2>
             <form action="/createAdService" method="post">
                 <input type="hidden" name="_token" :value="this.csrfToken">
                 <div class="form-group">
-                    <label for="name"><h5>Назва</h5></label>
+                    <label for="name"><h5>{{ $t("Announcement.name") }}</h5></label>
                     <input v-model="name" class="form-control" type="text" id="name" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="price"><h5>Ціна</h5></label>
+                    <label for="price"><h5>{{ $t("Announcement.price") }}</h5></label>
                     <input v-model="price" class="form-control" type="number" id="price" name="price">
                 </div>
                 <div class="form-group">
-                    <label for="category"><h5>Категорія</h5></label>
+                    <label for="category"><h5>{{ $t("Announcement.category") }}</h5></label>
                     <select name="category" id="category" class="form-select">
-                        <option value="1">Спортивний інвентар</option>
-                        <option value="2">Одяг та аксесуари</option>
-                        <option value="3">Товари для дітей</option>
-                        <option value="4">Електричні прилади</option>
+                        <option value="1">{{ $t("Announcement.sport") }}</option>
+                        <option value="2">{{ $t("Announcement.children") }}</option>
+                        <option value="3">{{ $t("Announcement.clothes") }}</option>
+                        <option value="4">{{ $t("Announcement.electrical") }}</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="description"><h5>Опис</h5></label>
+                    <label for="description"><h5>{{ $t("Announcement.description") }}</h5></label>
                     <textarea v-model="description" class="form-control" type="text" id="description" name="description"></textarea>
                 </div>
                 <div class="form-group text-center mt-3">
-                    <button class="btn" id="submitButton" type="submit">Створити оголошення</button>
+                    <button class="btn" id="submitButton" type="submit">{{ $t("Announcement.createAd") }}</button>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="ViewAd">
-        <h1> Ваші оголошення</h1>
+        <h1> {{ $t("Announcement.yourAd") }}</h1>
         <ad
             v-for="thing in thingsData"
             :key="thing.index"

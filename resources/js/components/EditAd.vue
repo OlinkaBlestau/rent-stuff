@@ -3,29 +3,29 @@
     <div class="d-flex col-12 form-edit container justify-content-center">
         <form :action=editServiceLink method="post">
             <input type="hidden" name="_token" :value="this.csrfToken">
-            <h1 class="title mb-3 fw-normal text-center">Редагувати оголошення</h1>
+            <h1 class="title mb-3 fw-normal text-center">{{ $t("Announcement.editAd") }}</h1>
             <div class="form-group">
-                <label for="name"><h5>Назва</h5></label>
+                <label for="name"><h5>{{ $t("Announcement.name") }}</h5></label>
                 <input v-model="name" type="text" :class="'form-control '" id="name" name="name">
             </div>
             <div class="form-group">
-                <label for="price"><h5>Ціна</h5></label>
+                <label for="price"><h5>{{ $t("Announcement.price") }}</h5></label>
                 <input v-model="price" type="number" :class="'form-control '" id="price" name="price">
             </div>
             <div class="form-group">
-                <label for="category"><h5>Категорія</h5></label>
+                <label for="category"><h5>{{ $t("Announcement.category") }}</h5></label>
                 <select name="category" id="category" class="form-select">
-                    <option value="1">Спортивний інвентар</option>
-                    <option value="2">Одяг та аксесуари</option>
-                    <option value="3">Товари для дітей</option>
-                    <option value="4">Електричні прилади</option>
+                    <option value="1">{{ $t("Announcement.sport") }}</option>
+                    <option value="2">{{ $t("Announcement.children") }}</option>
+                    <option value="3">{{ $t("Announcement.clothes") }}</option>
+                    <option value="4">{{ $t("Announcement.electrical") }}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="description"><h5>Опис</h5></label>
+                <label for="description"><h5>{{ $t("Announcement.description") }}</h5></label>
                 <textarea v-model="description" class="form-control" type="text" id="description" name="description"></textarea>            </div>
             <div class="form-group text-center">
-                <button class="btn" type="submit"  id="submitButton">Зберігти</button>
+                <button class="btn" type="submit"  id="submitButton">{{ $t("Announcement.btnSave") }}</button>
             </div>
         </form>
     </div>

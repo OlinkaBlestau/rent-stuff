@@ -1,22 +1,22 @@
 <template>
     <div class="infobox">
         <div class="thing__img">
-            <img class="images" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=NOjP63zV31cAX_YuGk0&tn=4PwsVO3a-OZjN1hy&_nc_ht=scontent.fhrk2-1.fna&oh=e75039597edf14e7247662a28e2632a7&oe=619F6D2E" alt="">
+            <img class="images" src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258233195_3061424107518810_4345716241999433935_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=ovBICvzgMY0AX_Q0OPu&_nc_ht=scontent.fhrk2-1.fna&oh=1dcb586c08f4260944aab9896baa9266&oe=61A4BE78" alt="">
         </div>
         <div class="name">
-            <h5 class="title">Назва:</h5>
+            <h5 class="title">{{ $t("Announcement.name") }}</h5>
             <p>{{ name }}</p>
         </div>
         <div class="name">
-            <h5 class="title">Ціна:</h5>
+            <h5 class="title">{{ $t("Announcement.price") }}</h5>
             <p>{{ price }}</p>
         </div>
         <div class="name">
-            <h5 class="title">Категорія:</h5>
+            <h5 class="title">{{ $t("Announcement.category") }}</h5>
             <p>{{ category }}</p>
         </div>
         <div class="name">
-            <h5 class="title">Опис:</h5>
+            <h5 class="title">{{ $t("Announcement.description") }}</h5>
             <p>{{ description }}</p>
         </div>
         <div class="btn-new">
@@ -115,7 +115,7 @@ export default {
 
     }
     .name {
-        margin: 0 410px 25px;
+        margin: 0 410px -3px;
     }
     .infobox {
         margin: 15px auto;
