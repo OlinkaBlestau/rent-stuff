@@ -3,41 +3,41 @@
         <div class="intro">
             <div class="img__container">
                 <h1 class="img__title">RentStuff</h1>
-                <h3 class="img__description">сервіс оренди</h3>
+                <h3 class="img__description">{{ $t('mainPages.rentalService') }}</h3>
             </div>
         </div>
         <section class="section__about">
             <div class="section__container">
                 <div class="section__header">
-                    <h3 class="section__title"> <a name="rent" >Можливо взяти в оренду</a> </h3>
+                    <h3 class="section__title"> <a name="rent" >{{ $t('mainPages.possibleToRent') }}</a> </h3>
                 </div>
             </div>
             <div class="about">
                 <div class="about__first">
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257617515_3061423760852178_5214139688266362271_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=s8_hL7xgI8YAX8HGyLW&_nc_oc=AQl6KhbbeFfLuKB052HaH_wR07pcHQMdNRO6AcjpsQy6qhEJiVyivXZJjMOY1SaBA3o&_nc_ht=scontent.fhrk2-1.fna&oh=104d80c2b4084095ae549fca9d80f13d&oe=619F964A" alt="">
-                            <h5 class="about__description">Спортивний інвентар</h5>
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257617515_3061423760852178_5214139688266362271_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=_bLE44L1ZjwAX80GRXF&_nc_oc=AQk7GYsmlH9U6hwhdKkXTTL-an2ThqTh2G3XrtU7vFD1QJ7Fo19EkklNobMmUEepzxo&_nc_ht=scontent.fhrk2-1.fna&oh=d610c0fae62734c50853761debc6b0ee&oe=61A5850A" alt="">
+                            <h5 class="about__description">{{ $t('mainPages.sport') }}</h5>
                         </div>
                     </div>
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258233195_3061424107518810_4345716241999433935_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=fGuNuEGAJpsAX_RSE1k&_nc_ht=scontent.fhrk2-1.fna&oh=00e49b755594de9a1967c94425056e19&oe=619ADB38" alt="">
-                            <h5 class="about__description">Твовари для дітей</h5>
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258233195_3061424107518810_4345716241999433935_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=ovBICvzgMY0AX_Q0OPu&_nc_ht=scontent.fhrk2-1.fna&oh=1dcb586c08f4260944aab9896baa9266&oe=61A4BE78" alt="">
+                            <h5 class="about__description">{{ $t('mainPages.children') }}</h5>
                         </div>
                     </div>
                 </div>
                 <div class="about__first">
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258170798_3061424124185475_8974984382869903643_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=IwlWB1JbstIAX8DOIB2&_nc_ht=scontent.fhrk2-1.fna&oh=6e25fca63a3ed321381f145a28741591&oe=619EE3A3" alt="">
-                            <h5 class="about__description">Одяг та аксесуари</h5>
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/258170798_3061424124185475_8974984382869903643_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=tNe_8z_rP4AAX_6IiZM&_nc_ht=scontent.fhrk2-1.fna&oh=63a1121f366bf0660076d47efde69f15&oe=61A4D263" alt="">
+                            <h5 class="about__description">{{ $t('mainPages.clothes') }}</h5>
                         </div>
                     </div>
                     <div class="about__item">
                         <div class="about__img">
-                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=NOjP63zV31cAX_YuGk0&tn=4PwsVO3a-OZjN1hy&_nc_ht=scontent.fhrk2-1.fna&oh=e75039597edf14e7247662a28e2632a7&oe=619F6D2E" alt="">
-                            <h5 class="about__description">Електричні прилади</h5>
+                            <img src="https://scontent.fhrk2-1.fna.fbcdn.net/v/t39.30808-6/257392082_3061424120852142_8626919439283653651_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=gIl8zKRpX9wAX_W6vV5&_nc_ht=scontent.fhrk2-1.fna&oh=1c8c65f58c513ccc157598243a28fd77&oe=61A55BEE" alt="">
+                            <h5 class="about__description">{{ $t('mainPages.electrical') }}</h5>
                         </div>
                     </div>
                 </div>
@@ -46,19 +46,19 @@
         <section class="section__help">
             <div class="section__help__user">
                 <div class="section__help__header">
-                    <h3 class="section__title"> <a name="help" > Допомога </a> </h3>
+                    <h3 class="section__title"> <a name="help" >{{ $t('mainPages.help') }}</a> </h3>
                 </div>
                 <div class="section__help__text">
-                    <p>RentStuff - сучасна платформа для оренди та здачі в оренду різноманітних речей.</p>
-                    <p>Інструкція користування:</p>
+                    <p>{{ $t('mainPages.text.modernPlatform') }}</p>
+                    <p>{{ $t('mainPages.text.instruction') }}</p>
                 </div>
                 <div class="mark__section__help">
                     <ul type="circle">
-                        <li>Орендодавці користуються Web - версією.</li>
-                        <li>Оредарі користуються Android - версією та частково Web - версією.</li>
-                        <li>Для розміщення оголошень орендодавцю треба бути зареєстрованим (-ою).</li>
-                        <li>Для того щоб переглядати та відповідати на оголошення, орендарю треба бути зареєстрованим (-ою).</li>
-                        <li>При винекненні запитань чи проблем зверніться до <a href="/Support" class="chat">служби підтримки</a>.</li>
+                        <li>{{ $t('mainPages.text.li1') }}</li>
+                        <li>{{ $t('mainPages.text.li2') }}</li>
+                        <li>{{ $t('mainPages.text.li3') }}</li>
+                        <li>{{ $t('mainPages.text.li4') }}</li>
+                        <li>{{ $t('mainPages.text.li5') }}<a href="/Support" class="chat">{{ $t('mainPages.text.a') }}</a>.</li>
                     </ul>
                 </div>
             </div>
@@ -66,11 +66,11 @@
         <section class="section__contacts">
             <div class="contacts">
                 <div class="contacts__title">
-                    <h3 class="section__title"><a name="contacts"> Контакти </a> </h3>
+                    <h3 class="section__title"> <a name="contacts">{{ $t('mainPages.contact') }}</a> </h3>
                 </div>
                 <div class="social__net">
-                    <h5 class="main_social_net">Соціальні мережі</h5>
-                    <h5 class="advertising__title">Реклама та співпраця</h5>
+                    <h5 class="main_social_net">{{ $t('mainPages.socialNet') }}</h5>
+                    <h5 class="advertising__title">{{ $t('mainPages.ourEmail') }}</h5>
                 </div>
                 <div class="list__net">
                     <a href="https://uk-ua.facebook.com/" class="social__networks">Facebook</a>
@@ -82,7 +82,7 @@
             </div>
         </section>
     </div>
-</template>Zago.au67@gmail.coma
+</template>
 
 <script>
 export default {

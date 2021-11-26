@@ -4,44 +4,44 @@
             <div class="d-flex col-12 form-signin container justify-content-center">
                 <form action="/signInService" method="post">
                     <input type="hidden" name="_token" :value="this.csrfToken">
-                    <h1 class="title mb-3 fw-normal text-center">Зареєструйтесь</h1>
+                    <h1 class="title mb-3 fw-normal text-center">{{ $t("formRegistration.signIn") }}</h1>
                     <div class="form-group mt-4">
-                        <label for="name">Iм'я</label>
+                        <label for="name">{{ $t("formRegistration.name") }}</label>
                         <input v-model="name" type="text" :class="'form-control ' + formErrors.name" id="name" name="name" placeholder="Введiть iм'я">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="surname">Прiзвище</label>
+                        <label for="surname">{{ $t("formRegistration.surname") }}</label>
                         <input v-model="surname" type="text" :class="'form-control ' + formErrors.surname" id="surname" name="surname" placeholder="Введiть прiзвище">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="email">Електронна пошта</label>
+                        <label for="email">{{ $t("formRegistration.email") }}</label>
                         <input v-model="email" type="email" :class="'form-control ' + formErrors.email" id="email" name="email" placeholder="name@example.com">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="password">Пароль</label>
+                        <label for="password">{{ $t("formRegistration.password") }}</label>
                         <input v-model="password" type="password" :class="'form-control ' + formErrors.password" id="password" name="password" placeholder="Введiть пароль">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="phone">Номер телефону</label>
+                        <label for="phone">{{ $t("formRegistration.phone") }}</label>
                         <input v-model="phone" type="phone" :class="'form-control ' + formErrors.phone" id="phone" name="phone" placeholder="Введiть номер телефону">
                     </div>
                     <div class="form-group mt-4">
-                        <label for="address">Адреса</label>
+                        <label for="address">{{ $t("formRegistration.address") }}</label>
                         <input v-model="address" type="text" :class="'form-control ' + formErrors.address" id="address" name="address" placeholder="Введiть адресу">
                     </div>
                     <div class="form-group mt-4">
-                        <label>Ви орендатор чи орендодавець</label>
+                        <label>{{ $t("formRegistration.choseRole") }}</label>
                         <select name="role" id="role" class="form-select">
-                            <option value="1" selected>Орендодавець</option>
-                            <option value="0">Орендатор</option>
+                            <option value="1" selected>{{ $t("formRegistration.landlord") }}</option>
+                            <option value="0">{{ $t("formRegistration.tenant") }}</option>
                         </select>
                     </div>
 
                     <div class="form-group text-center">
-                        <button class="btn" type="submit" :disabled="active">Зареєструватись</button>
+                        <button class="btn" type="submit" :disabled="active">{{ $t("formRegistration.btnEnter") }}</button>
                     </div>
                     <div class="form-group text-center">
-                        <a href="/signUp">Вже маю акаунт</a>
+                        <a href="/signUp">{{ $t("formRegistration.href") }}</a>
                     </div>
                 </form>
             </div>

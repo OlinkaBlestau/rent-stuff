@@ -12,42 +12,43 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav col-12 mb-2 text-center justify-content-center mb-md-0">
 
-                            <li v-if="role === '0'"><a type="button" href="/Tenant" class="nav-link link-dark px-2">Головна</a></li>
-                            <li v-else-if="role === '1'"><a type="button" href="/landLord" class="nav-link link-dark px-2">Головна</a></li>
-                            <li v-else><a type="button" href="/" class="nav-link link-dark px-2">Головна</a></li>
+                            <li v-if="role === '0'"><a type="button" href="/Tenant" class="nav-link link-dark px-2">{{ $t("navbar.main") }}</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="/landLord" class="nav-link link-dark px-2">{{ $t("navbar.main") }}</a></li>
+                            <li v-else><a type="button" href="/" class="nav-link link-dark px-2">{{ $t("navbar.main") }}</a></li>
 
-                            <li v-if="role === '0'"><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
-                            <li v-else-if="role === '1'"><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
-                            <li v-else><a type="button" href="#rent" class="nav-link link-dark px-2">Можливості</a></li>
+                            <li v-if="role === '0'"><a type="button" href="#rent" class="nav-link link-dark px-2">{{ $t("navbar.opportunities") }}</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#rent" class="nav-link link-dark px-2">{{ $t("navbar.opportunities") }}</a></li>
+                            <li v-else><a type="button" href="#rent" class="nav-link link-dark px-2">{{ $t("navbar.opportunities") }}</a></li>
 
-                            <li v-if="role === '0'"><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
-                            <li v-else-if="role === '1'"><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
-                            <li v-else><a type="button" href="#help" class="nav-link link-dark px-2">Допомога</a></li>
+                            <li v-if="role === '0'"><a type="button" href="#help" class="nav-link link-dark px-2">{{ $t("navbar.help") }}</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#help" class="nav-link link-dark px-2">{{ $t("navbar.help") }}</a></li>
+                            <li v-else><a type="button" href="#help" class="nav-link link-dark px-2">{{ $t("navbar.help") }}</a></li>
 
-                            <li v-if="role === '0'"><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
-                            <li v-else-if="role === '1'"><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
-                            <li v-else><a type="button" href="#contacts" class="nav-link link-dark px-2">Контакти</a></li>
+                            <li v-if="role === '0'"><a type="button" href="#contacts" class="nav-link link-dark px-2">{{ $t("navbar.contact") }}</a></li>
+                            <li v-else-if="role === '1'"><a type="button" href="#contacts" class="nav-link link-dark px-2">{{ $t("navbar.contact") }}</a></li>
+                            <li v-else><a type="button" href="#contacts" class="nav-link link-dark px-2">{{ $t("navbar.contact") }}</a></li>
 
-                            <li v-if="role === ''"><a type="button" href="/signUp" class="nav-link link-dark px-2">Увійти</a></li>
-                            <li v-else-if="role === '1'"><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Профіль</a>
+                            <li v-if="role === ''"><a type="button" href="/signUp" class="nav-link link-dark px-2">{{ $t("navbar.enter") }}</a></li>
+                            <li v-else-if="role === '1'"><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("navbar.profile") }}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="/ViewProfileLandlord">Мій профіль</a>
-                                    <a class="dropdown-item" href="/ViewAd">Мої оголошення</a>
-                                    <a class="dropdown-item" href="/CreateAd">Створити оголошення</a>
+                                    <a class="dropdown-item" href="/ViewProfileLandlord">{{ $t("navbar.myProfile") }}</a>
+                                    <a class="dropdown-item" href="/ViewAd">{{ $t("navbar.myAd") }}</a>
+                                    <a class="dropdown-item" href="/CreateAd">{{ $t("navbar.createAd") }}</a>
                                     <!--<a class="dropdown-item" href="#">Повідомлення</a>-->
-                                    <a class="dropdown-item" href="/Support">Служба підтримки</a>
+                                    <a class="dropdown-item" href="/Support">{{ $t("navbar.help") }}</a>
                                 </div>
                             </li>
-                            <li v-else><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Профіль</a>
+                            <li v-else><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ $t("navbar.profile") }}</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="/ViewProfileLandlord">Мій профіль</a>
-                                    <a class="dropdown-item" href="/Support">Служба підтримки</a>
+                                    <a class="dropdown-item" href="/ViewProfileLandlord">{{ $t("navbar.myProfile") }}</a>
+                                    <a class="dropdown-item" href="/Support">{{ $t("navbar.support") }}</a>
                                 </div>
                             </li>
-                            <li v-if="role !== ''"><a type="button" href="/logOut" class="nav-link link-dark px-2">Вийти</a></li>
-                            <li><a class="nav-link link-dark px-2 dropdown-toggle " href="#" role="button" id="dropdownMenuLinkLan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ua</a>
+                            <li v-if="role !== ''"><a type="button" href="/logOut" class="nav-link link-dark px-2">{{ $t("navbar.exit") }}</a></li>
+                            <li><a class="nav-link link-dark px-2 dropdown-toggle "  role="button" id="dropdownMenuLinkLan" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">ua</a>
                                 <div class="dropdown-menu" id = "lang" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item"  href="#">En</a>
+                                    <a class="dropdown-item"  @click="setLocale('en')" >En</a>
+                                    <a class="dropdown-item"  @click="setLocale('ua')" >Ua</a>
                                 </div>
                             </li>
                         </ul>
@@ -64,6 +65,13 @@ export default {
     props: {
         user: "",
         role: "",
+    },
+
+    methods: {
+        setLocale: function (locale) {
+            localStorage.setItem('locale', locale);
+            window.location.reload();
+        }
     }
 }
 </script>
@@ -76,9 +84,8 @@ header{
     font-family: 'Palanquin Dark', sans-serif;
 }
 html ,body{
-@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;700&display=swap');
 
-    font-family: 'Palanquin Dark', sans-serif;
+
     background-color: #ffffff;
     height: 100vh;
     margin: 0;

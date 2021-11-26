@@ -3,31 +3,31 @@
         <div class="infobox">
             <h2>Перегляд профілю</h2>
             <div class="data">
-                <p class="dataTitle">Ім'я</p>
+                <p class="dataTitle">{{ $t("formViewProfile.name") }}</p>
                 <p class="dataInfo">{{ this.userData.Name }}</p>
             </div>
             <div class="data">
-                <p class="dataTitle">Прізвище</p>
+                <p class="dataTitle">{{ $t("formViewProfile.surname") }}</p>
                 <p class="dataInfo">{{ this.userData.Surname }}</p>
             </div>
             <div class="data">
-                <p class="dataTitle">Номер мобільного телефону</p>
+                <p class="dataTitle">{{ $t("formViewProfile.email") }}</p>
                 <p class="dataInfo">{{ this.userData.Phone }}</p>
             </div>
             <div class="data">
-                <p class="dataTitle">E-mail</p>
+                <p class="dataTitle">{{ $t("formViewProfile.phone") }}</p>
                 <p class="dataInfo">{{ this.userData.Email }}</p>
             </div>
             <div class="data">
-                <p class="dataTitle">Адреса</p>
+                <p class="dataTitle">{{ $t("formViewProfile.address") }}</p>
                 <p class="dataInfo">{{ this.userData.Address }}</p>
             </div>
             <div class="data">
-                <p class="dataTitle">Пароль</p>
+                <p class="dataTitle">{{ $t("formViewProfile.password") }}</p>
                 <p class="dataInfo">{{ this.userData.Password }}</p>
             </div>
             <div class="text-center">
-                <a id="submitButton" href="/EditProfileLandlord" type="submit" class="btn">Редагувати профіль</a>
+                <a id="submitButton" href="/EditProfileLandlord" type="submit" class="btn">{{ $t("formViewProfile.btnEdit") }}</a>
             </div>
         </div >
     </div>

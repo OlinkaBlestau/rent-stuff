@@ -1,26 +1,26 @@
 <template>
     <div class="Support">
         <div class="infobox">
-            <h2>Надішліть повідомлення</h2>
-            <p>У разі винекнення проблеми чи запитань надішліть нам повідомлення, відповідь буде надіслана вам на пошту</p>
+            <h2>{{ $t("formSupport.title") }}</h2>
+            <p>{{ $t("formSupport.subtitle") }}</p>
             <div class="profile__info">
-                <h3>Ім'я</h3>
+                <h3>{{ $t("formSupport.name") }}</h3>
                 <input class="input__name" type="text" maxlength="30">
             </div>
             <div class="profile__info">
-                <h3>Прізвище</h3>
+                <h3>{{ $t("formSupport.surname") }}</h3>
                 <input class="input__name" type="text" maxlength="30">
             </div>
             <div class="profile__info">
-                <h3>E-mail</h3>
+                <h3>{{ $t("formSupport.email") }}</h3>
                 <input class="input__name" type="text" maxlength="30">
             </div>
             <div class="profile__info">
-                <h3>Повідомлення</h3>
+                <h3>{{ $t("formSupport.message") }}</h3>
                 <textarea class="massage"></textarea>
             </div>
             <div class="text-center">
-                <a id="submitButton" href="/Support" type="submit" class="btn">Надіслати</a>
+                <a id="submitButton" href="/Support" type="submit" class="btn">{{ $t("formSupport.href") }}</a>
             </div>
         </div>
     </div>
